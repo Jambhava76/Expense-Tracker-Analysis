@@ -1,4 +1,4 @@
-# 💰 Finance Dashboard – Personal Finance Management System
+# 💰 Expense Tracker Analysis – Personal Finance Management System
 
 A modern SaaS-style Personal Finance Dashboard built using Vanilla JavaScript, Chart.js, and jsPDF.
 
