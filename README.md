@@ -140,7 +140,7 @@ This project demonstrates:
 
 **Jambava Dattudu**
 
-Passionate about building modern web applications and financial dashboards using JavaScript.
+Passionate about building modern web applications using JavaScript.
 
 ---
 
