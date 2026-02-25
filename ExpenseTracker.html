@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Dashboard</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="expensetrackers.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- ================= HEADER ================= -->
+    <header style="display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;">
+      <h1>Finance Dashboard</h1>
+      <div>
+        <button class="secondary">Settings</button>
+        <button>Logout</button>
+      </div>
+    </header>
+
+    <!-- ================= SUMMARY CARDS ================= -->
+    <section class="inc-exp-container">
+      <div>
+        <small>Total Balance</small>
+        <div id="balance" class="money">₹0.00</div>
+      </div>
+      <div>
+        <small>Total Income</small>
+        <div id="money-plus" class="money money-plus">+₹0.00</div>
+      </div>
+      <div>
+        <small>Total Expense</small>
+        <div id="money-minus" class="money money-minus">-₹0.00</div>
+      </div>
+    </section>
+
+    <!-- ================= FILTER SECTION ================= -->
+    <h3>Date Filter</h3>
+    <div class="filter-section">
+      <input type="date" id="startDate">
+      <input type="date" id="endDate">
+      <button id="filterDate">Apply</button>
+    </div>
+
+    <!-- ================= TRANSACTIONS ================= -->
+    <h3>Transaction History</h3>
+    <ul id="list" class="list"></ul>
+
+    <!-- ================= ADD TRANSACTION ================= -->
+    <h3>Add Transaction</h3>
+    <form id="form">
+
+      <label>Description</label>
+      <input type="text" id="text" placeholder="Enter description" required>
+
+      <label>Amount (negative = expense, positive = income)</label>
+      <input type="number" id="amount" required>
+
+      <label>Category</label>
+      <select id="category">
+        <option value="Food">Food</option>
+        <option value="Salary">Salary</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Bills">Bills</option>
+        <option value="Travel">Travel</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <!-- Multi Account -->
+      <label>Account</label>
+      <select id="account">
+        <option value="Cash">Cash</option>
+        <option value="Bank">Bank</option>
+        <option value="Credit Card">Credit Card</option>
+      </select>
+
+      <button class="btn">Add Transaction</button>
+
+    </form>
+
+    <!-- ================= CATEGORY BUDGET ================= -->
+    <h3>Category Budgets</h3>
+    <div>
+      <input type="text" id="budgetCategory" placeholder="Category Name">
+      <input type="number" id="budgetAmount" placeholder="Budget Amount">
+      <button id="setCategoryBudget">Set Budget</button>
+    </div>
+
+    <!-- ================= SAVINGS GOALS ================= -->
+    <h3>Savings Goals</h3>
+    <div>
+      <input type="text" id="goalName" placeholder="Goal Name">
+      <input type="number" id="goalAmount" placeholder="Target Amount">
+      <button id="addGoal">Add Goal</button>
+    </div>
+    <div id="goalsList"></div>
+
+    <!-- ================= INSIGHTS ================= -->
+    <h3>Financial Insights</h3>
+    <div id="insights"></div>
+
+    <!-- ================= ANALYTICS ================= -->
+    <h3>Monthly Analytics</h3>
+    <canvas id="monthlyChart"></canvas>
+
+    <h3>Category Breakdown</h3>
+    <canvas id="categoryChart"></canvas>
+
+    <!-- ================= EXPORT ================= -->
+    <h3>Export Data</h3>
+    <button id="exportCSV">Export CSV</button>
+    <button id="exportPDF">Export PDF</button>
+
+  </div>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- Main Script -->
+  <script src="trackerscript.js"></script>
+
+</body>
+</html>
