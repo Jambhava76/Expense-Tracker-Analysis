@@ -4,6 +4,12 @@ A modern SaaS-style Personal Finance Dashboard built using Vanilla JavaScript, C
 
 ---
 
+## 🌐 Live Demo
+
+[View Live Demo](https://jambhava76.github.io/Expense-Tracker-Analysis/)
+
+---
+
 ## 🚀 Overview
 
 Finance Dashboard is a professional personal finance management system that allows users to:
@@ -158,5 +164,3 @@ Passionate about building modern web applications using JavaScript.
 ## ⭐ If you like this project
 
 Feel free to fork, star, and contribute.
-
-```
